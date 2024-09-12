@@ -1,0 +1,13 @@
+.filters-modal {
+    position: fixed;
+    left: 30px;
+    bottom: 10px;
+    background-color: rgba(40,40,40,.7);
+    padding: 12px;
+    border-radius: 10px;
+    transition: all .3s linear;
+}
+
+.filters-modal > span > strong {
+    color:cornflowerblue;
+}

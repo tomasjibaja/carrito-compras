@@ -1,0 +1,103 @@
+.cart {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(9,9,9,.9);
+    height: 0%;
+    width: 100%;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+
+.cart::after {
+    content: 'Your cart';
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    font-size: 1.6rem;
+    font-weight: 100;
+}
+
+.cart ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2rem;
+    overflow-y: hidden;
+    padding-left: 0;
+    height: 270px;
+    padding: 10px;
+}
+
+.cart ul li {
+    list-style: none;
+    border: 1px solid rgba(200,200,200,.2);
+    border-radius: 5px;
+    padding: 10px;
+    height: 240px;
+    width: 180px;
+    position: relative;
+}
+
+.cart-item-title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cart-item-title h4 {
+    margin: auto 0;
+}
+
+.cart ul li footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+}
+
+.cart li footer button {
+    padding: 5px 10px;
+    background-color: rgba(50,50,50,.5);
+}
+
+.clear-button {
+    margin: 20px auto;
+    display: grid;
+    place-items: center;
+}
+
+.cart img {
+    width: 180px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.cart-button {
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: all .1s linear;
+    border: 1px solid transparent;
+}
+
+.cart-button:hover {
+    transform: scale(1.05);
+    border-color: azure;
+}
+
+.cart-button ~ input:checked ~ .cart {
+    height: 400px;
+}
