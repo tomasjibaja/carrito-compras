@@ -2,7 +2,7 @@
     position: fixed;
     bottom: 0;
     left: 0;
-    background-color: rgba(9,9,9,.9);
+    background-color: var(--dark-99);
     height: 0%;
     width: 100%;
     transition: all .5s ease;
@@ -68,6 +68,7 @@
     margin: 20px auto;
     display: grid;
     place-items: center;
+    background-color: var(--primary-70);
 }
 
 .cart img {
@@ -84,13 +85,13 @@
     top: 10px;
     right: 10px;
     cursor: pointer;
-    background-color: cornflowerblue;
+    background-color: var(--primary);
     padding: 10px;
     width: 30px;
     height: 30px;
     border-radius: 50%;
     transition: all .1s linear;
-    border: 1px solid transparent;
+    border: 1px solid var(--dark-50);
 }
 
 .cart-button:hover {
@@ -100,4 +101,12 @@
 
 .cart-button ~ input:checked ~ .cart {
     height: 400px;
+}
+
+@media (max-width: 800px) {
+    .cart::after {
+        top: 10px;
+        left: 10px;
+        font-size: 1rem;
+    }
 }

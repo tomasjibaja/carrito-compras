@@ -7,6 +7,8 @@ import { useFilters } from './hooks/useFilters'
 import { Cart } from "./components/Cart"
 import { CartProvider } from "./context/cart"
 import './App.css'
+import Nav from "./components/Nav"
+
 
 function App() {
 
@@ -29,7 +31,7 @@ function App() {
 
   return (
     <CartProvider>
-      <h1>Shopping Cart 🛒</h1>
+      <Nav />
       <Header categories={categories} />
       <Products products={filteredProducts} />
       <Footer filters={filters} />

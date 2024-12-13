@@ -1,0 +1,17 @@
+nav {
+  background-color: var(--secondary);
+  height: 75px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+nav svg {
+  font-size: 27px;
+  margin: auto 16px;
+}
+
+nav h1 {
+  font-size: 30px;
+}

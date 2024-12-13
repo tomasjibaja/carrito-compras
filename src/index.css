@@ -5,12 +5,46 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: var(--primary);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary: rgba(100, 81, 170, 1);
+  --primary-90: rgba(100, 81, 170, .9);
+  --primary-70: rgba(100, 81, 170, .7);
+  --primary-50: rgba(100, 81, 170, .5);
+  --primary-30: rgba(100, 81, 170, .3);
+
+  --secondary: rgba(125, 98, 221, 1);
+  --secondary-90: rgba(125, 98, 221, .9);
+  --secondary-70: rgba(125, 98, 221, .7);
+  --secondary-50: rgba(125, 98, 221, .5);
+  --secondary-30: rgba(125, 98, 221, .3);
+
+  --strong: rgba(101, 59, 255, 1);
+  --strong-90: rgba(101, 59, 255, .9);
+  --strong-70: rgba(101, 59, 255, .7);
+  --strong-50: rgba(101, 59, 255, .5);
+
+  --dark: rgb(38, 31, 65);
+  --dark-99: rgba(38, 31, 65, .99);
+  --dark-90: rgba(38, 31, 65, .9);
+  --dark-70: rgba(38, 31, 65, .7);
+  --dark-50: rgba(38, 31, 65, .5);
+  --dark-30: rgba(38, 31, 65, .3);
+}
+
+@keyframes shine {
+  0% {filter: brightness(1);}
+  50% {filter: brightness(1.1)}
+  100% {filter: brightness(1);}
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 body {
@@ -47,13 +81,13 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
-button:hover {
+/* button:hover {
   border-color: #646cff;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
-}
+} */
 
 @media (prefers-color-scheme: light) {
   :root {

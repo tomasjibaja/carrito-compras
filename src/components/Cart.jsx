@@ -39,9 +39,9 @@ export function Cart() {
       <aside className="cart">
         {cart.length > 0 &&
           <button onClick={clearCart} className="clear-button">
-          <ClearCartIcon />
-          <span> Clear Cart</span>
-        </button>}
+            <ClearCartIcon />
+            <span> Clear Cart</span>
+          </button>}
         <ul>
           {
             cart.length > 0 &&

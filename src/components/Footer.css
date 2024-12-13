@@ -2,7 +2,7 @@
     position: fixed;
     left: 30px;
     bottom: 10px;
-    background-color: rgba(40,40,40,.7);
+    background-color: var(--dark-90);
     padding: 12px;
     border-radius: 10px;
     transition: all .3s linear;
@@ -10,4 +10,12 @@
 
 .filters-modal > span > strong {
     color:cornflowerblue;
+}
+
+@media (max-width: 800px) {
+    .filters-modal {
+        left: 0;
+        right: 0;
+        margin: auto 10px;
+    }
 }
