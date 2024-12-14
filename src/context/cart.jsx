@@ -49,7 +49,8 @@ export function CartProvider ({ children }) {
             clearCart,
             removeFromCart,
             handlePlus,
-            handleMinus
+            handleMinus,
+            setCart
         }}>
             {children}
         </CartContext.Provider>

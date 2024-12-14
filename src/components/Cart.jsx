@@ -4,6 +4,9 @@ import { CartIcon, RemoveFromCartIcon, ClearCartIcon } from "./Icons"
 import { useId } from "react"
 import './Cart.css'
 import { useCart } from "../hooks/useCart"
+import { useNavigate } from 'react-router-dom'
+import { IoBagCheckOutline } from "react-icons/io5";
+
 
 function CartItem ({ product, removeFromCart, handlePlus, handleMinus }) {
   return (
@@ -28,6 +31,7 @@ function CartItem ({ product, removeFromCart, handlePlus, handleMinus }) {
 export function Cart() {
   const cartCheckboxId = useId()
   const { cart, clearCart, removeFromCart, handlePlus, handleMinus } = useCart()
+  const navigate = useNavigate()
 
   return (
     <>
@@ -37,11 +41,18 @@ export function Cart() {
       <input type="checkbox" id={cartCheckboxId} hidden />
 
       <aside className="cart">
+        <h2 className="cart-title">Your Cart</h2>
         {cart.length > 0 &&
-          <button onClick={clearCart} className="clear-button">
-            <ClearCartIcon />
-            <span> Clear Cart</span>
-          </button>}
+          <div className="cart-buttons">
+            <button onClick={clearCart} className="clear-button">
+              <ClearCartIcon />
+              <span>Clear Cart</span>
+            </button>
+            <button onClick={() => navigate('/checkout')} className="checkout-button">
+              <IoBagCheckOutline />
+              <span>Checkout</span>
+            </button>
+          </div>}
         <ul>
           {
             cart.length > 0 &&

@@ -7,11 +7,28 @@ nav {
   justify-content: start;
 }
 
-nav svg {
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+}
+
+.logo svg {
   font-size: 27px;
   margin: auto 16px;
 }
 
-nav h1 {
+.logo h1 {
   font-size: 30px;
+}
+
+@media (max-width: 800px) {
+  .logo svg {
+    font-size: 21px;
+  }
+  
+  .logo h1 {
+    font-size: 20px;
+  }
 }

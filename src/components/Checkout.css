@@ -1,0 +1,138 @@
+.checkout {
+  width: 90vw;
+  max-width: 700px;
+  border: 3px solid var(--strong-50);
+  margin: auto;
+  margin-top: 70px;
+  background-color: var(--dark-70);
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px 0;
+}
+
+.checkout-items-wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.checkout-items-wrapper h3 {
+  font-weight: 300;
+  margin: 0;
+}
+
+.checkout-product {
+  border: 2px solid var(--primary-70);
+  border-radius: 7px;
+  background-color: var(--primary-50);
+  padding: 7px 18px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkout-product-image {
+  height: 50px;
+}
+
+.checkout-product-title {
+  font-weight: 300;
+  font-size: 1.2rem;
+  width: 300px;
+}
+
+.checkout-product-price {
+  font-weight: 700;
+}
+
+.checkout-total {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding: 7px 18px;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.confirm-msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  animation: appear .5s ease;
+}
+
+@keyframes appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.confirm-msg svg {
+  font-size: 3rem;
+}
+
+.checkout-buttons {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.checkout-buttons button {
+  transition: all .3s ease;
+  border: 2px solid var(--dark);
+}
+
+.checkout-buttons button:hover {
+  border: 2px solid var(--strong);
+}
+
+.checkout-buttons button:first-of-type {
+  background-color: var(--primary-70);
+}
+
+.checkout-buttons button:nth-of-type(2) {
+  background-color: var(--secondary-90);
+}
+
+@media (max-width: 800px) {
+
+  .checkout {
+    margin-top: 30px;
+  }
+
+  .checkout-items-wrapper {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .checkout-product {
+    font-size: .8rem;
+    padding: 6px 12px;
+    text-wrap: nowrap;
+  }
+
+  .checkout-product-title {
+    width: 120px;
+    font-size: .8rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .checkout-product-image {
+    height: 30px;
+  }
+
+  .checkout-total {
+    font-size: 1rem;
+  }
+
+}
